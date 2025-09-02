@@ -14,5 +14,13 @@
         "amount": 100.0,
         "category": "General",
         "currency": "KES"
+    },
+    {
+        "id": 3,
+        "date": "2025-09-02",
+        "description": "purchase of headphones",
+        "amount": 3500.0,
+        "category": "General",
+        "currency": "KES"
     }
 ]

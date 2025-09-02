@@ -39,3 +39,23 @@ def list_expenses():
     for exp in expenses:
         print(f"{exp['id']}   {exp['date']}  {exp['description']}  "
               f"{exp['amount']} {exp['currency']}   {exp['category']}")
+
+def delete_expense(expense_id):
+    expenses = load_expenses()
+    expenses = [exp for exp in expenses if exp["id"] != expense_id]
+    save_expenses(expenses)
+    print("Expense deleted successfully")
+
+def summary(month=None):
+    expenses = load_expenses()
+    total = 0
+    currency = "USD"
+    for exp in expenses:
+        exp_month = int(exp["date"].split("-")[1])
+        if month is None or exp_month == month:
+            total += exp["amount"]
+            currency = exp["currency"]  # Assume same currency for summary
+    if month:
+        print(f"Total expenses for month {month}: {total} {currency}")
+    else:
+        print(f"Total expenses: {total} {currency}")

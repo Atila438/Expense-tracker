@@ -16,3 +16,18 @@ View Expenses: Display all expenses in the system.
 Summary of Expenses: See a summary of all expenses.
 
 Monthly Summary: View a summary of expenses for a specific month of the current year.
+
+------How it works------
+
+1.Add an expense
+python expense_tracker.py add --description "Lunch" --amount 200 --currency KES --category Food
+
+2.List all expenses
+python expense_tracker.py list
+
+3.Delete an expense (by ID)
+python expense_tracker.py delete --id 1
+
+4.Summary of all expenses OR by month
+python expense_tracker.py summary
+python expense_tracker.py summary --month 8

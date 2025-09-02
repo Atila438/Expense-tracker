@@ -59,3 +59,43 @@ def summary(month=None):
         print(f"Total expenses for month {month}: {total} {currency}")
     else:
         print(f"Total expenses: {total} {currency}")
+
+# ---------------- CLI Setup ----------------
+def main():
+    parser = argparse.ArgumentParser(description="Expense Tracker CLI")
+    subparsers = parser.add_subparsers(dest="command")
+
+# Add expense
+    add_parser = subparsers.add_parser("add")
+    add_parser.add_argument("--description", required=True)
+    add_parser.add_argument("--amount", type=float, required=True)
+    add_parser.add_argument("--category", default="General")
+    add_parser.add_argument("--currency", default="USD", help="Currency (e.g., USD, EUR, KES)")
+
+# List expenses
+    subparsers.add_parser("list")
+
+ # Delete expense
+    delete_parser = subparsers.add_parser("delete")
+    delete_parser.add_argument("--id", type=int, required=True)
+
+# Summary
+    summary_parser = subparsers.add_parser("summary")
+    summary_parser.add_argument("--month", type=int, help="Month number (1-12)")
+
+args = parser.parse_args()
+
+# Run commands
+if args.command == "add":
+    add_expense(args.description, args.amount, args.category, args.currency)
+elif args.command == "list":
+    list_expenses()
+elif args.command == "delete":
+    delete_expense(args.id)
+elif args.command == "summary":
+    summary(args.month)
+else:
+    parser.print_help()
+
+if __name__ == "__main__":
+    main()

@@ -83,19 +83,19 @@ def main():
     summary_parser = subparsers.add_parser("summary")
     summary_parser.add_argument("--month", type=int, help="Month number (1-12)")
 
-args = parser.parse_args()
+    args = parser.parse_args()
 
-# Run commands
-if args.command == "add":
-    add_expense(args.description, args.amount, args.category, args.currency)
-elif args.command == "list":
-    list_expenses()
-elif args.command == "delete":
-    delete_expense(args.id)
-elif args.command == "summary":
-    summary(args.month)
-else:
-    parser.print_help()
+    # Run commands
+    if args.command == "add":
+        add_expense(args.description, args.amount, args.category, args.currency)
+    elif args.command == "list":
+        list_expenses()
+    elif args.command == "delete":
+        delete_expense(args.id)
+    elif args.command == "summary":
+        summary(args.month)
+    else:
+        parser.print_help()
 
 if __name__ == "__main__":
     main()

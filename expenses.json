@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "date": "2025-09-02",
+        "description": "Lunch",
+        "amount": 200.0,
+        "category": "General",
+        "currency": "KES"
+    },
+    {
+        "id": 2,
+        "date": "2025-09-02",
+        "description": "Break",
+        "amount": 100.0,
+        "category": "General",
+        "currency": "KES"
+    }
+]

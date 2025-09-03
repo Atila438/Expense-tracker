@@ -1,47 +1,34 @@
-Expense Tracker Application
+# Expense Tracker (CLI Application)
 
-A simple command-line application to help you manage your personal finances. This application allows users to add, update, delete, and view their expenses, as well as view summaries of their spending.
+A simple **command-line application** to help you manage your personal finances. This tool allows you to **add, update, delete, and view expenses**, as well as generate summaries for better tracking of your spending habits.
 
-Features
-Core Features
+This project is a great way to practice **logic building, file handling, and CLI development**, while also providing a practical tool for everyday financial management.
 
-Add Expense: Record an expense with a description and amount.
+---
 
-Update Expense: Modify an existing expense.
+##  Features
 
-Delete Expense: Remove an expense from your records.
+### Core Features
+- **Add Expense**: Record an expense with a description and amount.
+- **Update Expense**: Modify an existing expense.
+- **Delete Expense**: Remove an expense by its ID.
+- **View Expenses**: Display all recorded expenses.
+- **Summary of Expenses**: View a complete overview of all expenses.
+- **Monthly Summary**: Filter expenses by a specific month of the current year.
 
-View Expenses: Display all expenses in the system.
+### Optional Enhancements
+- **Categories**: Add categories and filter expenses by category.
+- **Budget Tracking**: Set monthly budgets and receive warnings when exceeded.
+- **Export to CSV**: Save expenses in CSV format for external use.
 
-Summary of Expenses: See a summary of all expenses.
+---
 
-Monthly Summary: View a summary of expenses for a specific month of the current year.
+## Installation
 
-------How it works------
-0.To get a list of functions input 
+Clone this repository and navigate into the project directory:
+```bash
+git clone https://github.com/your-username/expense-tracker.git
+cd expense-tracker
 
-python expense_tracker.py --help or --h
-
-1.Add an expense
-
-python expense_tracker.py add --description "Lunch" --amount 200 --currency KES --category Food
-
-2.List all expenses
-
-python expense_tracker.py list
-
-3.Delete an expense (by ID)
-
-python expense_tracker.py delete --id 1
-
-4.Summary of all expenses OR by month
-
-python expense_tracker.py summary
-
-python expense_tracker.py summary --month 8
-
-
-
-------Project URL------
-
-https://roadmap.sh/projects/expense-tracker
+This version includes the attribution to the original project idea source. If you need further adjustments or additions, feel free to ask!
+::contentReference[oaicite:0]{index=0}

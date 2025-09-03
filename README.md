@@ -18,6 +18,9 @@ Summary of Expenses: See a summary of all expenses.
 Monthly Summary: View a summary of expenses for a specific month of the current year.
 
 ------How it works------
+0.To get a list of functions input 
+
+python expense_tracker.py --help or --h
 
 1.Add an expense
 
@@ -36,6 +39,7 @@ python expense_tracker.py delete --id 1
 python expense_tracker.py summary
 
 python expense_tracker.py summary --month 8
+
 
 
 ------Project URL------
